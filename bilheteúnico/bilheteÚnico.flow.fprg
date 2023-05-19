@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="21dei"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-09 01:50:54 "/>
+        <attribute name="created" value="MjFkZWk7REVTS1RPUC04UVVQS0FIOzIwMjMtMDUtMDY7IjEyOjA1OjUyICI7MjY5MA=="/>
+        <attribute name="edited" value="MjFkZWk7REVTS1RPUC04UVVQS0FIOzIwMjMtMDUtMDY7IjAxOjI2OjIzICI7MTsyNzk3"/>
+        <attribute name="edited" value="TGFiO0RFU0tUT1AtMDhPTlFRSTsyMDIzLTA1LTA5OyIwMTo1MDo1NCAiOzE3OzI3MDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declara&#231;&#227;o de Variavel"/>
+            <declare name="Cadastro" type="String" array="False" size=""/>
+            <declare name="RG, CEP, CPF, CONTA, CART&#195;O" type="Real" array="False" size=""/>
+            <declare name="bilhete" type="String" array="False" size=""/>
+            <output expression="(&quot;Voc&#234; deseja fazer um bilhete &#250;nico?(s/n)&quot;)" newline="True"/>
+            <input variable="(bilhete)"/>
+            <if expression="bilhete == &quot;s&quot;">
+                <then/>
+                <else/>
+            </if>
+            <output expression="&quot;preencha com os dados solicitados\n&quot;" newline="True"/>
+            <declare name="Nome" type="String" array="False" size=""/>
+            <output expression="&quot;insira seu nome:&quot;" newline="True"/>
+            <input variable="Nome"/>
+            <output expression="&quot;insira seu rg:&quot;" newline="True"/>
+            <input variable="RG"/>
+            <output expression="&quot;insira seu cpf:&quot;" newline="True"/>
+            <input variable="CPF"/>
+            <output expression="&quot;insira o cep de sua resid&#234;ncia:&quot;" newline="True"/>
+            <input variable="CEP"/>
+            <declare name="RECARGA" type="String" array="False" size=""/>
+            <output expression="&quot;se seus dados estiverem corretos o bilhete ser&#225; enviado para sua casa em at&#233; quinze dias&quot;" newline="True"/>
+            <input variable="RECARGA"/>
+            <output expression="&quot;voc&#234; deseja fazer a recarga?(s/n)&quot;" newline="True"/>
+            <input variable="RECARGA"/>
+            <if expression="RECARGA = &quot;n&quot;">
+                <then>
+                    <output expression="&quot; Ok, voc&#234; pode recarregar seu cart&#227;o quando quiser&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Ok, insira o valor de sua conta banc&#225;ria:&quot;" newline="True"/>
+                </else>
+            </if>
+            <input variable="CONTA"/>
+            <output expression="&quot;Qual o valor de recarrga desejado?:&quot;" newline="True"/>
+            <input variable="CART&#195;O"/>
+            <if expression="CONTA &lt; CART&#195;O">
+                <then>
+                    <output expression="&quot;Saldo insuficiente&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Voc&#234; pode fazer a recarga&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
